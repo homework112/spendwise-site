@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>隱私權政策 | SpendWise</title>
-<meta name="description" content="SpendWise 隱私權政策：收集哪些資料、如何使用與儲存、如何刪除。">
+<meta name="description" content="SpendWise 隱私權政策：收集哪些資料、如何使用與儲存、保存多久、如何刪除。">
 <style>
   :root {
     --text: #222;
@@ -82,7 +82,7 @@
 
 <main>
   <h1>隱私權政策</h1>
-  <p class="updated">最後更新日期：2026 年 10 月 14 日</p>
+  <p class="updated">最後更新日期：2026 年 11 月 2 日</p>
 
   <p>SpendWise 是世新大學資訊管理學系的畢業專題，透過 LINE 官方帳號提供消費分析、記帳與信用卡優惠推薦。本政策說明 SpendWise 收集哪些資料、如何使用與儲存，以及你可以如何刪除這些資料。</p>
 
@@ -90,31 +90,44 @@
   <ul>
     <li><strong>LINE 使用者 ID</strong>：LINE 平台提供的識別碼，用來區分不同使用者。我們不會取得你的 LINE 密碼、好友名單或聊天紀錄。</li>
     <li><strong>你自行輸入的卡片資料</strong>：你登記的銀行名稱與卡片名稱。<strong>我們不收集信用卡卡號、有效期限或安全碼。</strong></li>
-    <li><strong>你自行輸入的消費紀錄</strong>：日期、金額、店家、類別、備註；外幣消費另外記錄原幣金額與換算匯率。</li>
-    <li><strong>收據照片</strong>：使用「拍照記帳」或聚餐分帳拍收據時，照片只用來辨識店家、日期與金額，<strong>照片本身不會儲存</strong>。</li>
-    <li><strong>信用卡卡面照片</strong>：使用「拍卡面新增」時，照片只用來辨識發卡銀行、卡片名稱與卡別，<strong>照片本身不會儲存</strong>，辨識時也不會附上你的 LINE 使用者 ID；若辨識結果中出現疑似卡號的數字，該筆結果會直接捨棄。拍攝時可用手指遮住卡號，請勿拍攝卡片背面。照片仍會留在 LINE 聊天紀錄中，建議傳送後 24 小時內長按照片選擇「收回」。</li>
-    <li><strong>位置</strong>：使用「附近優惠查詢」時你主動分享的位置，用來查詢附近的店家；如果你訂閱某個地區的優惠，會儲存該位置的座標與地址。</li>
-    <li><strong>AI 對話內容</strong>：你向 SpendWise 提問時輸入的文字，用來產生回覆。</li>
+    <li><strong>你的消費紀錄</strong>：日期、金額、店家、類別、備註、來源（手動記帳、拍照記帳、Gmail 匯入等）；外幣消費另外記錄原幣金額與換算匯率；有讀到統一發票號碼時也會記錄發票號碼，用來找出重複的紀錄。</li>
+    <li><strong>收據照片</strong>：使用「拍照記帳」或聚餐分帳拍收據時，照片會送給 Anthropic 辨識店家、日期與金額。<strong>照片本身和辨識結果都不會存進資料庫</strong>，辨識時也不會附上你的 LINE 使用者 ID；只有在你看過確認卡、按下「確認送出」後，確認卡上的內容才會存成你的一筆消費紀錄。</li>
+    <li><strong>信用卡卡面照片</strong>：使用「拍卡面新增」時，照片會送給 Anthropic 辨識發卡銀行、卡片名稱與卡別。<strong>照片本身和辨識結果都不會存進資料庫</strong>，辨識時也不會附上你的 LINE 使用者 ID；若辨識結果中出現疑似卡號的數字，該筆結果會直接捨棄。只有在你選擇「新增這張卡」後，才會存下銀行與卡片名稱。<strong>建議拍攝時用手指遮住卡號</strong>，也請勿拍攝卡片背面。照片仍會留在 LINE 聊天紀錄中，建議傳送後 24 小時內長按照片選擇「收回」。</li>
+    <li><strong>位置</strong>：使用「附近優惠查詢」時你主動分享的位置，或你輸入的地點名稱，用來查詢附近的店家，查完不會儲存。如果你訂閱附近的店家或某個地區的優惠，會儲存該位置的座標與地址（詳見「六、資料儲存、保存期間與安全」）。</li>
+    <li><strong>優惠訂閱</strong>：你訂閱的店家、銀行或地區，以及你選的通知類型（新優惠通知、優惠到期通知）。</li>
+    <li><strong>AI 對話內容</strong>：你向 SpendWise 提問時輸入的文字，用來產生回覆。對話記憶只暫存在伺服器的記憶體中，超過 30 分鐘沒有對話就會清除，<strong>不會存進資料庫</strong>。</li>
+    <li><strong>為你推薦的結果</strong>：使用「為你推薦」時，會儲存這次推薦了哪些優惠、推薦理由與摘要（例如最常去的店家、花最多的類別），用來在 24 小時內直接顯示同一份結果，以及避免近期重複推薦同一筆優惠。</li>
     <li><strong>你的 Anthropic API 金鑰</strong>（選用）：如果你自行設定，金鑰會加密存放，只用來替你呼叫 AI 功能。</li>
-    <li><strong>Gmail 資料</strong>（僅在你授權後）：詳見下方「二、Gmail 資料」。</li>
+    <li><strong>Gmail 資料</strong>（僅在你連結 Gmail 後）：詳見下方「二、Gmail 資料」。</li>
   </ul>
 
   <h2>二、Gmail 資料</h2>
-  <p>只有在你主動點選「連結 Gmail」並在 Google 同意畫面按下允許後，SpendWise 才會存取你的 Gmail。</p>
+  <p>只有在你主動連結 Gmail 後，SpendWise 才會讀取你的 Gmail。連結方式有兩種，同一時間只能使用其中一種：</p>
 
-  <h3>權限範圍</h3>
-  <p>SpendWise 只申請 Gmail <strong>唯讀</strong>權限（<code>gmail.readonly</code>）：<strong>只讀不寫，不會寄信、不會刪信</strong>，也不會修改、標記或移動任何信件。</p>
+  <h3>連結方式一：Google 帳號授權</h3>
+  <p>點選「用 Google 帳號連結」，在 Google 的同意畫面按下允許。SpendWise 只申請 Gmail <strong>唯讀</strong>權限（<code>gmail.readonly</code>）：<strong>只讀不寫，不會寄信、不會刪信</strong>，也不會修改、標記或移動任何信件。授權 token（連同你的 Gmail 地址）會加密存放。</p>
+
+  <h3>連結方式二：Gmail 應用程式密碼</h3>
+  <ul>
+    <li>點選「用應用程式密碼連結」，會用手機的瀏覽器開啟 SpendWise 的輸入頁面，在那裡輸入你的 Gmail 地址和在 Google 帳戶產生的應用程式密碼。<strong>請不要把密碼貼在 LINE 聊天室</strong>；如果在聊天室打出像應用程式密碼的文字，SpendWise 會直接提醒你，不會儲存。</li>
+    <li>送出後 SpendWise 會先用這組密碼登入確認，成功才儲存。<strong>Gmail 地址和應用程式密碼會一起加密存放</strong>，密碼不會出現在伺服器紀錄中。為了防止有人一直嘗試，每次送出會記錄你的 LINE 使用者 ID 和時間（15 分鐘內最多 5 次），超過 24 小時的紀錄會在之後有人送出時一併清掉。</li>
+    <li>讀取時只用唯讀方式：<strong>只讀不改，不會寄信、刪信、移動信件，也不會把信件標成已讀</strong>。</li>
+    <li>應用程式密碼是你在 Google 帳戶產生的，SpendWise 無法替你刪除 Google 那邊的這組密碼；解除連結後，建議你也到 Google 帳戶刪除它。</li>
+  </ul>
 
   <h3>讀取哪些內容</h3>
   <ul>
-    <li><strong>信件主旨</strong>：為了找出發票通知信，會讀取最近 6 個月內、最多 50 封信件的主旨，判斷是否含有「電子發票」「統一發票」等關鍵字。主旨不會儲存，只記錄信件 ID 與「是否為發票信」，避免重複判斷。</li>
-    <li><strong>發票通知信內容</strong>：在你按下「更新消費紀錄」時，才會讀取被判斷為發票信的信件主旨、寄件者、內文，以及 PDF／HTML 附件中的文字。</li>
+    <li><strong>找發票信</strong>：SpendWise 只會搜尋最近 6 個月內、主旨含有發票相關關鍵字（例如「電子發票」「統一發票」）的信件，最多 1,000 封，再讀取這些信件的主旨確認是否為發票信。<strong>主旨不會儲存</strong>，只記錄信件 ID 與「是否為發票信」，避免重複判斷。打開「消費分析」時也會用同樣的方式檢查有沒有新的發票信。</li>
+    <li><strong>發票信內容</strong>：只有在你按下「更新消費紀錄」（或「繼續匯入」）時，才會讀取發票信的主旨、寄件者、內文，以及 PDF／HTML 附件中的文字；每按一次最多處理 20 封。</li>
     <li><strong>你的 Gmail 地址</strong>：在 LINE 中顯示「已連結：你的信箱」，讓你確認連結的是自己的帳號。</li>
   </ul>
 
   <h3>如何處理</h3>
-  <p>發票通知信的內容（每封最多前 3,000 字）會透過 <strong>Anthropic 的 Claude API</strong>，使用<strong>你自己設定的 API 金鑰</strong>進行解析，取出店家、日期、金額與消費類別，存成你的消費紀錄。</p>
-  <p><strong>信件內文、主旨與附件不會儲存</strong>；資料庫只保留解析出的消費紀錄，以及對應的信件 ID（用來避免重複匯入）。</p>
+  <p>發票信的內容（每封最多前 3,000 字）會透過 <strong>Anthropic 的 Claude API</strong> 解析，取出店家、日期、金額、發票號碼與消費類別，存成你的消費紀錄。有設定自己的 API 金鑰時使用你的金鑰；還沒有設定的人，第一次更新會由 SpendWise 的金鑰免費解析（見「三、AI 功能與試用額度」）。</p>
+  <p><strong>信件內文、主旨與附件不會儲存</strong>；資料庫只保留解析出的消費紀錄，以及對應的信件 ID 與處理狀態（已匯入、不是發票、解析失敗、你刪掉的），用來避免重複匯入。</p>
+
+  <h3>解除連結</h3>
+  <p>解除連結後：使用 Google 帳號授權的，SpendWise 會向 Google 撤銷授權，並刪除資料庫中的授權 token 與 Gmail 地址；使用應用程式密碼的，會刪除加密保存的應用程式密碼與 Gmail 地址。<strong>已匯入的消費紀錄會保留</strong>，信件 ID 的處理紀錄也會保留（重新連結時才不會重複匯入）；如需刪除，請見「七、如何刪除你的資料」。</p>
 
   <h3>Google API 服務使用者資料政策</h3>
   <blockquote>
@@ -122,48 +135,59 @@
     <p>SpendWise 使用從 Google API 取得的資訊，以及將這些資訊傳輸至任何其他應用程式時，將遵守 Google API 服務使用者資料政策，包括其中的「有限使用」要求。</p>
   </blockquote>
 
-  <h2>三、資料用途</h2>
+  <h2>三、AI 功能與試用額度</h2>
+  <ul>
+    <li><strong>AI 試用額度</strong>：直接打字問問題、為你推薦、拍照記帳、聚餐分帳拍收據、拍卡面新增會用到 AI。沒有設定自己 API 金鑰的人，可以使用 SpendWise 提供的每日試用額度，用完隔天重置；設定自己的金鑰後改用你的金鑰，不受試用額度限制。</li>
+    <li><strong>第一次免費解析發票信</strong>：還沒有設定自己 API 金鑰的人，第一次按「更新消費紀錄」時，會由 SpendWise 的金鑰免費解析最近 10 封發票信，每人限一次。</li>
+    <li><strong>使用紀錄</strong>：為了計算試用額度與免費解析次數，SpendWise 會記錄：<strong>試用額度</strong>——你的 LINE 使用者 ID、日期、當天用掉的 AI 費用（美元）、更新時間；<strong>免費解析</strong>——你的 LINE 使用者 ID、是否已經用過（狀態）與時間，以及每天用掉的 AI 費用。<strong>這些紀錄不包含你問的問題、照片或信件內容</strong>，目前會長期保存，不會自動刪除。</li>
+    <li><strong>常見用法問題的回答</strong>：像「日期可以怎麼打」「要怎麼離開」這類跟個人資料無關的用法問題，AI 的回答會暫存在伺服器的記憶體中 24 小時，讓之後問同樣問題的人可以直接看到答案。只會暫存不含個人資料的問題與回答，<strong>不包含你的 LINE 使用者 ID 或任何身分資料</strong>，也不會存進資料庫；跟你的消費、卡片、記帳等有關的問題不會暫存。</li>
+  </ul>
+
+  <h2>四、資料用途</h2>
   <p>上述資料<strong>只用於</strong>以下功能：</p>
   <ul>
     <li>消費分析與消費報告</li>
-    <li>記帳（手動記帳、拍照記帳、Gmail 發票匯入）</li>
-    <li>信用卡與店家優惠推薦，以及你訂閱的優惠到期提醒</li>
+    <li>記帳（手動記帳、拍照記帳、Gmail 發票匯入）與找出重複的消費紀錄</li>
+    <li>信用卡與店家優惠推薦、聚餐分帳，以及你訂閱的新優惠通知與優惠到期提醒</li>
   </ul>
   <div class="note">
     <p><strong>我們不販售你的資料，也不將你的資料提供給第三方做廣告用途。</strong>SpendWise 沒有任何廣告。</p>
   </div>
 
-  <h2>四、協助提供服務的第三方</h2>
+  <h2>五、協助提供服務的第三方</h2>
   <p>為了提供上述功能，部分資料會傳送給以下服務，僅限於完成該功能所需：</p>
   <ul>
-    <li><strong>LINE</strong>：傳遞你與 SpendWise 之間的訊息。</li>
-    <li><strong>Google</strong>：Gmail API（讀取發票通知信）、Places API（依你分享的位置查詢附近店家）。</li>
+    <li><strong>LINE</strong>：傳遞你與 SpendWise 之間的訊息與通知。</li>
+    <li><strong>Google</strong>：Gmail（讀取發票信）、Places API（依你分享的位置或輸入的地點查詢附近店家）。</li>
     <li><strong>Anthropic（Claude API）</strong>：解析發票信、收據照片與信用卡卡面照片、產生 AI 回覆與優惠推薦說明。</li>
     <li><strong>Supabase</strong>：存放資料庫。</li>
   </ul>
 
-  <h2>五、資料儲存與安全</h2>
+  <h2>六、資料儲存、保存期間與安全</h2>
   <ul>
     <li>資料存放於 Supabase 提供的 PostgreSQL 資料庫。</li>
-    <li><strong>Gmail 授權 token</strong>（連同你的 Gmail 地址）與<strong>你的 Anthropic API 金鑰</strong>，都以加密方式存放於資料庫。</li>
-    <li>伺服器紀錄（log）中的 LINE 使用者 ID、信箱、token 與金鑰都會遮蔽或不記錄。</li>
+    <li><strong>Gmail 授權 token</strong>（連同你的 Gmail 地址）、<strong>Gmail 應用程式密碼</strong>（連同你的 Gmail 地址）與<strong>你的 Anthropic API 金鑰</strong>，都以加密方式存放於資料庫。</li>
+    <li>伺服器紀錄（log）中的 LINE 使用者 ID、信箱、token、密碼與金鑰都會遮蔽或不記錄。</li>
+    <li><strong>優惠訂閱與位置</strong>：訂閱附近的店家或地區時，會儲存位置座標、地址、訂閱的店家，以及通知類型。當你在 SpendWise 取消訂閱時，我們會立即刪除該筆訂閱紀錄，包括你訂閱時分享的位置座標與地址；已取消的訂閱不會再保留任何位置資料。</li>
+    <li><strong>重複的消費紀錄</strong>：同一筆消費被記了兩次（例如拍照記帳之後又從 Gmail 匯入同一張發票）時，SpendWise 會把兩筆合併。合併後被取代的那一筆仍會保留在資料庫中，但不再計算進任何統計，你可以按「復原」把它放回來；刪除保留的那一筆時，被合併的那一筆會一起刪除。</li>
+    <li><strong>通知紀錄</strong>：為了避免同一則優惠重複通知，會記錄通知過你哪些優惠與日期。</li>
   </ul>
 
-  <h2>六、如何刪除你的資料</h2>
+  <h2>七、如何刪除你的資料</h2>
   <p>你可以在 LINE 的 SpendWise 官方帳號中自行操作：</p>
   <ul>
-    <li><strong>解除 Gmail 連結</strong>：<span class="path">我的管理 → 我的資料 → Gmail 連結 → 解除連結</span>。SpendWise 會向 Google 撤銷授權，並刪除資料庫中的 Gmail 授權 token 與 Gmail 地址。已匯入的消費紀錄會保留，如需刪除請見下一項。你也可以到 <a href="https://myaccount.google.com/permissions" rel="noopener">Google 帳戶的第三方存取設定</a> 移除 SpendWise 的權限。</li>
-    <li><strong>刪除消費紀錄</strong>：<span class="path">我的管理 → 我的資料 → 刪除消費紀錄</span>。</li>
+    <li><strong>解除 Gmail 連結</strong>：<span class="path">我的管理 → 我的資料 → Gmail 連結 → 解除連結</span>。刪除哪些資料請見「二、Gmail 資料」的「解除連結」。使用 Google 帳號授權的，也可以到 <a href="https://myaccount.google.com/permissions" rel="noopener">Google 帳戶的第三方存取設定</a> 移除 SpendWise 的權限；使用應用程式密碼的，建議到 <a href="https://myaccount.google.com/apppasswords" rel="noopener">Google 帳戶的應用程式密碼頁面</a> 刪除那組密碼。</li>
+    <li><strong>刪除消費紀錄</strong>：<span class="path">我的管理 → 我的資料 → 刪除消費紀錄</span>，可以刪除單筆或清空全部（合併在那筆裡的重複紀錄會一起刪除）。刪除從 Gmail 匯入的紀錄後，那封發票信會記成「你刪掉的」，之後不會再自動匯入。</li>
     <li><strong>刪除已登記的卡片</strong>：<span class="path">我的管理 → 我的卡片 → 刪除卡片</span>。</li>
     <li><strong>刪除你的 API 金鑰</strong>：<span class="path">我的管理 → 我的資料 → 刪除我的 API Key</span>。</li>
-    <li><strong>取消優惠訂閱</strong>：在「我的訂閱」中取消。</li>
+    <li><strong>取消優惠訂閱</strong>：<span class="path">我的管理 → 我的訂閱 → 取消訂閱</span>，會立即刪除那筆訂閱與它的位置資料。</li>
   </ul>
-  <p>如果你希望刪除與你的 LINE 使用者 ID 相關的<strong>所有資料</strong>（包含上述以外的紀錄，例如 Gmail 信件 ID 的處理紀錄），請來信下方聯絡信箱，我們會協助處理。</p>
+  <p>如果你希望刪除與你的 LINE 使用者 ID 相關的<strong>所有資料</strong>（包含上述以外的紀錄，例如 Gmail 信件 ID 的處理紀錄、試用額度與免費解析的使用紀錄、為你推薦的結果、通知紀錄），請來信下方聯絡信箱，我們會協助處理。</p>
 
-  <h2>七、聯絡我們</h2>
+  <h2>八、聯絡我們</h2>
   <p>對本政策或你的資料有任何問題，請來信：<a href="mailto:homeworka11222@gmail.com">homeworka11222@gmail.com</a></p>
 
-  <h2>八、政策更新</h2>
+  <h2>九、政策更新</h2>
   <p>本政策如有修改，會更新本頁內容與最上方的「最後更新日期」。</p>
 </main>
 
